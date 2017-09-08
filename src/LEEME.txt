@@ -1,0 +1,17 @@
+Se asumió que para una consultada dada: 
+
+un hecho está bien formulado si tiene el siguiente formato:
+nombreHecho(argumentos)
+
+una regla está bien formulada si tiene el siguiente formado:
+nombreRegla(argumento1,argumento2,argumento3,...,argumentoN).
+
+En caso de que, ya sea el hecho o la regla cumpla el formato correspondiente, el programa devolverá TRUE o FALSE en caso de que ESTE O NO ESTE.En otro caso, devolverá NIL.
+
+Así,en el test "incomplete_database_test" se espera que devuelva true en el primer caso y false en los siguientes. 
+
+Dado que para procesar la información se prestaba a ambiguedad la separación de los hechos (en una regla) y la de los argumentos ya que ambos eran separados con el mismo patrón (", ") se decidió separar los argumentos con una coma (",") sin espacio (" "). Por lo tanto, deben borrarse los espacios entre los argumentos.
+
+POR FAVOR CONSIDERAR ESTO AL MOMENTO DE EJECUTAR LOS TESTS, YA QUE DE OTRA MANERA NO SE OBTENDRAN LOS RESULTADOS ESPERADOS.
+
+TODOS LOS TESTS HAN SIDO MODIFICADOS CON LOS CRITERIOS MENCIONADOS.

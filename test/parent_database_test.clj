@@ -10,13 +10,13 @@
 	varon(alejandro).
 	mujer(maria).
 	mujer(cecilia).
-	padre(juan, pepe).
-	padre(juan, pepa).
-	padre(hector, maria).
-	padre(roberto, alejandro).
-	padre(roberto, cecilia).
-	hijo(X, Y) :- varon(X), padre(Y, X).
-	hija(X, Y) :- mujer(X), padre(Y, X).
+	padre(juan,pepe).
+	padre(juan,pepa).
+	padre(hector,maria).
+	padre(roberto,alejandro).
+	padre(roberto,cecilia).
+	hijo(X,Y) :- varon(X), padre(Y,X).
+	hija(X,Y) :- mujer(X), padre(Y,X).
 ")
 
 (deftest parent-database-fact-test
@@ -30,18 +30,18 @@
     (is (= (evaluate-query parent-database "mujer(cecilia)")
            true)))
   (testing "padre(juan, pepe) should be true"
-    (is (= (evaluate-query parent-database "padre(juan, pepe)")
+    (is (= (evaluate-query parent-database "padre(juan,pepe)")
            true)))
   (testing "padre(mario, pepe) should be false"
-    (is (= (evaluate-query parent-database "padre(mario, pepe)")
+    (is (= (evaluate-query parent-database "padre(mario,pepe)")
            false))))
 
 (deftest parent-database-rule-test
-  (testing "hijo(pepe, juan) should be true"
-    (is (= (evaluate-query parent-database "hijo(pepe, juan)")
+  (testing "hijo(pepe,juan) should be true"
+    (is (= (evaluate-query parent-database "hijo(pepe,juan)")
            true)))
-  (testing "hija(maria, roberto) should be false"
-    (is (= (evaluate-query parent-database "hija(maria, roberto)")
+  (testing "hija(maria,roberto) should be false"
+    (is (= (evaluate-query parent-database "hija(maria,roberto)")
            false))))
 
 (deftest parent-database-empty-query-test
