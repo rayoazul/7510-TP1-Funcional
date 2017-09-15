@@ -29,10 +29,10 @@
   (testing "mujer(cecilia) should be true"
     (is (= (evaluate-query parent-database "mujer(cecilia)")
            true)))
-  (testing "padre(juan, pepe) should be true"
+  (testing "padre(juan,pepe) should be true"
     (is (= (evaluate-query parent-database "padre(juan,pepe)")
            true)))
-  (testing "padre(mario, pepe) should be false"
+  (testing "padre(mario,pepe) should be false"
     (is (= (evaluate-query parent-database "padre(mario,pepe)")
            false))))
 
